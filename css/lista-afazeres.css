@@ -1,0 +1,99 @@
+body{
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, #FFF7DE, #BBD6D2, #76B4C5);
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 7rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: 500;
+}
+
+a{
+    font-size: 24px;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #76B4C5;
+    text-decoration: underline;
+}
+
+img{
+    height: 4rem;
+    width: 4rem;
+    margin-right: 3.8rem;
+}
+
+main{
+    flex: 1;        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p{
+    font-weight: 800;
+    font-size: 32px;
+}
+
+#nome-pagina{
+    margin-left: 3rem;
+    margin-bottom: 1.8rem;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+li{
+    width: 85%;
+    height: 5.5rem;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+input{
+    height: 4rem;
+    width: 4rem;
+}
+
+input[type="checkbox"]:checked{
+    accent-color: white;
+}
+
+label{
+    padding: 24px;
+    width: 95%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 24px;
+    background-color: #FFF7DE;
+}
+
+label:hover{
+    background-color: #76B4C5;
+}
+
+.icone-lixo{
+    background-color: #FA8E8E;
+    padding: 10px;
+    border-radius: 24px;
+}
+
+#icone-add{
+    margin: auto;
+}

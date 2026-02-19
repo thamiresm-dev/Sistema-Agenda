@@ -1,0 +1,51 @@
+body{
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, #FFF7DE, #BBD6D2, #76B4C5);
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 7rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+img{
+    height: 4rem;
+    width: 4rem;
+    margin-right: 3.8rem;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div{
+    background-color: #FFF7DE;
+    width: 35rem;
+    height: 5.5rem;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+div:hover{
+    background-color: #76B4C5;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
