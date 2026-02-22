@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['email'])){
+        header('Location: login.html');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +17,8 @@
 </head>
 <body>
     <header>
-        <a href="menu-principal.html">Menu principal</a>
-        <img src="../img/T-icone-perfil.png" alt="Ícone de perfil">
+        <a href="menu-principal.php">Menu principal</a>
+        <img src="../img/profile.png" alt="Ícone de perfil">
     </header>
     <main>
         <p id="nome-pagina">Minhas tarefas</p>

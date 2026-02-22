@@ -14,13 +14,13 @@
         </a>
     </header>
     <main>
-        <form action="">
-            <label for="">Nome de usuário:</label>
-            <input type="text">
-            <label for="">Email:</label>
-            <input type="email" name="" id="">
-            <label for="">Senha:</label>
-            <input type="password" name="" id="">
+        <form action="../../backend/users/cadastro.php" method="post">
+            <label for="nome">Nome de usuário:</label>
+            <input type="text" name="username" class="input" id="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="input" id="email" required>
+            <label for="senha">Senha:</label>
+            <input type="password" name="password" class="input" id="senha" required>
             <button type="submit">Criar conta</button>
         </form>
     </main>
