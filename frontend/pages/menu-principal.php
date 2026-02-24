@@ -17,7 +17,13 @@
 </head>
 <body>
     <header>
-        <img src="../img/profile.png" alt="Ícone de perfil">
+        <div class="perfil-container">
+            <img src="../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
+            <div class="menu-perfil">
+                <a href="../../backend/users/logout.php">Sair</a>
+                <a href="">Apagar conta</a>
+            </div>
+        </div>
     </header>
     <main>
         <div class="option">
@@ -30,5 +36,6 @@
             <a href="lista-afazeres.php">Lista de afazeres</a>
         </div>
     </main>
+    <script src="../js/menu-dropdown.js"></script>
 </body>
 </html>

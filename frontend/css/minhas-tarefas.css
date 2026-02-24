@@ -6,29 +6,64 @@ body{
 }
 
 header{
-    height: 7rem;
     display: flex;
+    padding: 1rem;
     justify-content: end;
     align-items: center;
-    font-weight: 500;
 }
 
-a{
+#menu-principal{
     font-size: 24px;
     margin-right: 1.5rem;
     text-decoration: none;
     color: black;
 }
 
-a:hover{
+#menu-principal:hover{
     color: #76B4C5;
     text-decoration: underline;
+}
+
+.perfil-container{
+    margin-right: 3.8rem;
+    position: relative;
 }
 
 img{
     height: 4rem;
     width: 4rem;
-    margin-right: 3.8rem;
+    cursor: pointer;
+}
+
+.menu-perfil{
+    position: absolute;
+    background-color: white;
+    font-size: 20px;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    right: 0;    
+    display: none;
+}
+
+.menu-perfil.ativo{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-perfil a{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; /* Padding não ultrapassa o tamanho do menu */
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-perfil a:hover{
+    color: #76B4C5;
 }
 
 main{

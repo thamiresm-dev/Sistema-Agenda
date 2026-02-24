@@ -7,7 +7,7 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,14 @@
 </head>
 <body>
       <header>
-        <a href="menu-principal.php">Menu principal</a>
-        <img src="../img/profile.png" alt="Ícone de perfil">
+        <a href="menu-principal.php" id="menu-principal">Menu principal</a>
+        <div class="perfil-container">
+            <img src="../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
+            <div class="menu-perfil">
+                <a href="../../backend/users/logout.php">Sair</a>
+                <a href="">Apagar conta</a>
+            </div>
+        </div>
     </header>
     <main>
         <p id="nome-pagina">Anotações</p>
@@ -44,6 +50,6 @@
         </div>
         <img src="../img/add.png" alt="Ícone de adicionar nova anotação" id="icone-add">
     </main>
-</body>
+    <script src="../js/menu-dropdown.js"></script>
 </body>
 </html>
