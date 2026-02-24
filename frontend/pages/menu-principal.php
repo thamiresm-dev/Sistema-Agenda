@@ -21,7 +21,7 @@
             <img src="../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
             <div class="menu-perfil">
                 <a href="../../backend/users/logout.php">Sair</a>
-                <a href="">Apagar conta</a>
+                <a href="" onclick="confirmaExclusaoConta()">Apagar conta</a>
             </div>
         </div>
     </header>
@@ -37,5 +37,6 @@
         </div>
     </main>
     <script src="../js/menu-dropdown.js"></script>
+    <script src="../js/confirma-exclusao-conta.js"></script>
 </body>
 </html>
