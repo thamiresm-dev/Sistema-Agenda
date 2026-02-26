@@ -101,16 +101,18 @@ p{
     border-radius: 24px;
 }
 
-.item{
+#link-tarefa{
     padding: 24px;
     width: 95%;
     margin-left: 2rem;
     margin-right: 2rem;
     border-radius: 24px;
     background-color: #FFF7DE;
+    text-decoration: none;
+    color: black;
 }
 
-.item:hover{
+#link-tarefa:hover{
     background-color: #76B4C5;
 }
 
@@ -120,6 +122,6 @@ p{
     border-radius: 24px;
 }
 
-#icone-add{
+#link-icone-add{
     margin: auto;
 }

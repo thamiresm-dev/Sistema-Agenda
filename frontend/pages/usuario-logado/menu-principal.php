@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION['email'])){
-        header('Location: login.html');
+        header('Location: ../login.html');
         exit();
     }
 ?>
@@ -12,15 +12,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Principal</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/menu-principal.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/menu-principal.css">
 </head>
 <body>
     <header>
         <div class="perfil-container">
-            <img src="../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
+            <img src="../../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
             <div class="menu-perfil">
-                <a href="../../backend/users/logout.php">Sair</a>
+                <a href="../../../backend/users/logout.php">Sair</a>
                 <a href="" onclick="confirmaExclusaoConta()">Apagar conta</a>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <a href="lista-afazeres.php">Lista de afazeres</a>
         </div>
     </main>
-    <script src="../js/menu-dropdown.js"></script>
-    <script src="../js/confirma-exclusao-conta.js"></script>
+    <script src="../../js/menu-dropdown.js"></script>
+    <script src="../../js/confirma-exclusao-conta.js"></script>
 </body>
 </html>

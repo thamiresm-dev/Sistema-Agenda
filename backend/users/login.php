@@ -14,7 +14,7 @@
         if(password_verify($password, $dadosUsuario['password'])){
             $_SESSION['id'] = $dadosUsuario['id'];
             $_SESSION['email'] = $dadosUsuario['email'];
-            header('Location: ../../frontend/pages/menu-principal.php');
+            header('Location: ../../frontend/pages/usuario-logado/menu-principal.php');
         }
         else{
             echo "Senha incorreta!";

@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION['email'])){
-        header('Location: login.html');
+        header('Location: ../login.html');
         exit();
     }
 ?>
@@ -12,16 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Afazeres</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/lista-afazeres.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lista-afazeres.css">
 </head>
 <body>
     <header>
         <a href="menu-principal.php" id="menu-principal">Menu principal</a>
         <div class="perfil-container">
-            <img src="../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
+            <img src="../../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
             <div class="menu-perfil">
-                <a href="../../backend/users/logout.php">Sair</a>
+                <a href="../../../backend/users/logout.php">Sair</a>
                 <a href="" onclick="confirmaExclusaoConta()">Apagar conta</a>
             </div>
         </div>
@@ -32,27 +32,27 @@
             <li>
                 <input type="checkbox" name="" id="">
                 <label for="">Enviar atividade de Sistemas Operacionais</label>
-                <img src="../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
+                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
             </li>
             <li>
                 <input type="checkbox" name="" id="">
                 <label for="">Reunião com a empresa</label>
-                <img src="../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
+                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
             </li>
             <li>
                 <input type="checkbox" name="" id="">
                 <label for="">Fazer trabalho de Engenharia de Software</label>
-                <img src="../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
+                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
             </li>
             <li>
                 <input type="checkbox" name="" id="">
                 <label for="">Comprar detergente</label>
-                <img src="../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
+                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
             </li>
         </ul>
-        <img src="../img/add.png" alt="Ícone de adicionar nova tarefa" id="icone-add">
+        <img src="../../img/add.png" alt="Ícone de adicionar nova tarefa" id="icone-add">
     </main>
-    <script src="../js/menu-dropdown.js"></script>
-    <script src="../js/confirma-exclusao-conta.js"></script>
+    <script src="../../js/menu-dropdown.js"></script>
+    <script src="../../js/confirma-exclusao-conta.js"></script>
 </body>
 </html>

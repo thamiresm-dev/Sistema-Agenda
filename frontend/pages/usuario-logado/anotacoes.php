@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION['email'])){
-        header('Location: login.html');
+        header('Location: ../login.html');
         exit();
     }
 ?>
@@ -12,16 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anotações</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/anotacoes.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/anotacoes.css">
 </head>
 <body>
       <header>
         <a href="menu-principal.php" id="menu-principal">Menu principal</a>
         <div class="perfil-container">
-            <img src="../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
+            <img src="../../img/profile.png" alt="Ícone de perfil" onclick="exibirMenu()">
             <div class="menu-perfil">
-                <a href="../../backend/users/logout.php">Sair</a>
+                <a href="../../../backend/users/logout.php">Sair</a>
                 <a href="" onclick="confirmaExclusaoConta()">Apagar conta</a>
             </div>
         </div>
@@ -48,9 +48,9 @@
                 <p>Sobre o trabalho de Sistemas Operacionais</p>
             </div>
         </div>
-        <img src="../img/add.png" alt="Ícone de adicionar nova anotação" id="icone-add">
+        <img src="../../img/add.png" alt="Ícone de adicionar nova anotação" id="icone-add">
     </main>
-    <script src="../js/menu-dropdown.js"></script>
-    <script src="../js/confirma-exclusao-conta.js"></script>
+    <script src="../../js/menu-dropdown.js"></script>
+    <script src="../../js/confirma-exclusao-conta.js"></script>
 </body>
 </html>
