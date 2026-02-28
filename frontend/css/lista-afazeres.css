@@ -101,6 +101,11 @@ li{
     border-radius: 24px;
 }
 
+form{
+    width: 90%;
+    display: flex;
+}
+
 input{
     height: 4rem;
     width: 4rem;
@@ -119,16 +124,12 @@ label{
     background-color: #FFF7DE;
 }
 
-label:hover{
-    background-color: #76B4C5;
-}
-
 .icone-lixo{
     background-color: #FA8E8E;
     padding: 10px;
     border-radius: 24px;
 }
 
-#icone-add{
+#link-icone-add{
     margin: auto;
 }

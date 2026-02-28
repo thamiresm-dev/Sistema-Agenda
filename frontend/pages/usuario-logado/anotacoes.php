@@ -44,7 +44,7 @@
                 <?php } ?>
             </div>
         <?php } ?>
-        <a href="criar-anotacao.php" id="link-icone-add"><img src="../../img/add.png" alt="Ícone de adicionar nova tarefa" id="icone-add"></a>
+        <a href="criar-anotacao.php" id="link-icone-add"><img src="../../img/add.png" alt="Ícone de adicionar nova anotação" id="icone-add"></a>
     </main>
     <script src="../../js/menu-dropdown.js"></script>
     <script src="../../js/confirma-exclusao-conta.js"></script>

@@ -1,10 +1,15 @@
 <?php
     session_start();
+    include_once("../../../backend/conexao.php");
 
     if(!isset($_SESSION['email'])){
         header('Location: ../login.html');
         exit();
     }
+    
+    $id_usuario = $_SESSION['id'];
+    $sql = "SELECT * FROM lista WHERE id_usuario = $id_usuario";
+    $lista = mysqli_query($conexao, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,29 +33,21 @@
     </header>
     <main>
         <p id="nome-pagina">Lista de afazeres</p>
-        <ul>
-            <li>
-                <input type="checkbox" name="" id="">
-                <label for="">Enviar atividade de Sistemas Operacionais</label>
-                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
-            </li>
-            <li>
-                <input type="checkbox" name="" id="">
-                <label for="">Reunião com a empresa</label>
-                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
-            </li>
-            <li>
-                <input type="checkbox" name="" id="">
-                <label for="">Fazer trabalho de Engenharia de Software</label>
-                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
-            </li>
-            <li>
-                <input type="checkbox" name="" id="">
-                <label for="">Comprar detergente</label>
-                <img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo">
-            </li>
-        </ul>
-        <img src="../../img/add.png" alt="Ícone de adicionar nova tarefa" id="icone-add">
+        <?php if(mysqli_num_rows($lista) > 0){ ?>
+            <ul>
+                <?php while($item = mysqli_fetch_assoc($lista)){ ?>
+                    <li>
+                        <form action="../../../backend/users/atualizar-item-lista.php" method="post">
+                            <input type="hidden" name="id-item" value="<?php echo $item['id_item']; ?>">
+                            <input type="checkbox" name="concluido" id="1" onchange="this.form.submit()" <?php echo $item['concluido'] == 1 ? 'checked' : '' ?>>
+                            <label for=""><?php echo $item['descricao']; ?></label>
+                        </form>
+                        <a href="../../../backend/users/excluir-item-lista.php?id_item=<?php echo $item['id_item']; ?>"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
+                    </li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
+        <a href="criar-item-lista.php" id="link-icone-add"><img src="../../img/add.png" alt="Ícone de adicionar novo item"></a>
     </main>
     <script src="../../js/menu-dropdown.js"></script>
     <script src="../../js/confirma-exclusao-conta.js"></script>
