@@ -102,10 +102,15 @@ p{
     padding: 24px;
 }
 
+#link-nota{
+    text-decoration: none;
+    color: black;
+}
+
 .nota:hover{
     background-color: #76B4C5;
 }
 
-#icone-add{
+#link-icone-add{
     margin: auto;
 }

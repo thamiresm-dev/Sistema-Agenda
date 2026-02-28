@@ -1,10 +1,15 @@
 <?php
     session_start();
+    include_once("../../../backend/conexao.php");
 
     if(!isset($_SESSION['email'])){
         header('Location: ../login.html');
         exit();
     }
+    
+    $id_usuario = $_SESSION['id'];
+    $sql = "SELECT * FROM anotacoes WHERE id_usuario = $id_usuario";
+    $anotacoes = mysqli_query($conexao, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,27 +33,18 @@
     </header>
     <main>
         <p id="nome-pagina">Anotações</p>
-        <div class="anotacoes">
-            <div class="nota">
-                <p>Sobre o trabalho de Engenharia de Software</p>
+        <?php if(mysqli_num_rows($anotacoes) > 0){ ?>
+            <div class="anotacoes">
+                <?php while($nota = mysqli_fetch_assoc($anotacoes)){ ?>
+                    <div class="nota">
+                        <a href="detalhes-anotacao.php?id_anotacao=<?php echo $nota['id_anotacao']; ?>" id="link-nota">
+                            <p><?php echo $nota['titulo']; ?></p>
+                        </a>
+                    </div>
+                <?php } ?>
             </div>
-            <div class="nota">
-                <p>Sobre o trabalho de Sistemas Operacionais</p>
-            </div>
-            <div class="nota">
-                <p>Sobre o trabalho de Sistemas Operacionais</p>
-            </div>
-            <div class="nota">
-                <p>Sobre o trabalho de Sistemas Operacionais</p>
-            </div>
-            <div class="nota">
-                <p>Sobre o trabalho de Sistemas Operacionais</p>
-            </div>
-            <div class="nota">
-                <p>Sobre o trabalho de Sistemas Operacionais</p>
-            </div>
-        </div>
-        <img src="../../img/add.png" alt="Ícone de adicionar nova anotação" id="icone-add">
+        <?php } ?>
+        <a href="criar-anotacao.php" id="link-icone-add"><img src="../../img/add.png" alt="Ícone de adicionar nova tarefa" id="icone-add"></a>
     </main>
     <script src="../../js/menu-dropdown.js"></script>
     <script src="../../js/confirma-exclusao-conta.js"></script>

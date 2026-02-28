@@ -45,7 +45,7 @@
                 <?php } ?>
             </div>
         <?php } ?>
-        <a href="criar-tarefa.php" id="link-icone-add"><img src="../../img/add.png" alt="Ícone de adicionar nova tarefa" id="icone-add"></a>
+        <a href="criar-tarefa.php" id="link-icone-add"><img src="../../img/add.png" alt="Ícone de adicionar nova tarefa"></a>
     </main>
     <script src="../../js/menu-dropdown.js"></script>
     <script src="../../js/confirma-exclusao-conta.js"></script>
