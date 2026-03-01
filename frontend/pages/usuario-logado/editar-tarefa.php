@@ -8,7 +8,7 @@
     }
 
     $id_tarefa = $_GET['id_tarefa'];
-    $sql = "SELECT * FROM tarefas WHERE id_tarefa = $id_tarefa";;
+    $sql = "SELECT * FROM tarefas WHERE id_tarefa = $id_tarefa";
     $tarefa = mysqli_query($conexao, $sql);
     $dados_tarefa = mysqli_fetch_assoc($tarefa);
 ?>
@@ -17,9 +17,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detalhes tarefa</title>
+    <title>Editar tarefa</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/detalhes.css">
+    <link rel="stylesheet" href="../../css/criar.css">
 </head>
 <body>
     <header>
@@ -28,15 +28,16 @@
         </a>
     </header>
     <main>
-        <form action="" method="">
+        <form action="../../../backend/users/editar-tarefa.php" method="post">
+            <input type="hidden" name="id-tarefa" value="<?php echo $dados_tarefa['id_tarefa']; ?>">
             <label for="titulo">Título:</label>
-            <p class="dados" id="titulo"><?php echo $dados_tarefa['titulo']; ?></p>
+            <input type="text" name="titulo" id="titulo" value="<?php echo $dados_tarefa['titulo']; ?>">
             <label for="descricao">Descrição:</label>
-            <p class="dados" id="descricao"><?php echo $dados_tarefa['descricao']; ?></p>
+            <textarea name="descricao" id="descricao" cols="30" rows="10"><?php echo $dados_tarefa['descricao']; ?></textarea>
             <label for="data">Data de conclusão:</label>
-            <p class="dados" id="data"><?php echo $dados_tarefa['data']; ?></p>
+            <input type="date" name="data" id="data" value="<?php echo $dados_tarefa['data']; ?>">
+            <button type="submit">Criar</button>
         </form>
-        <a href="editar-tarefa.php?id_tarefa=<?php echo $dados_tarefa['id_tarefa']; ?>" class="icone"><img src="../../img/editar.png" alt="Ícone de editar" class="icone-editar"></a>
     </main>
 </body>
 </html>

@@ -17,9 +17,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar tarefa</title>
+    <title>Editar anotação</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/detalhes.css">
+    <link rel="stylesheet" href="../../css/criar.css">
 </head>
 <body>
     <header>
@@ -28,14 +28,14 @@
         </a>
     </header>
     <main>
-        <form action="" method="">
-            <p class="dados" id="titulo"><b><?php echo $dados_anotacao['titulo']; ?></b></p>
-            <p class="dados" id="conteudo"><?php echo $dados_anotacao['conteudo']; ?></p>
+        <form action="../../../backend/users/editar-anotacao.php" method="post">
+            <input type="hidden" name="id-anotacao" value="<?php echo $dados_anotacao['id_anotacao']; ?>">
+            <label for="titulo">Título:</label>
+            <input type="text" name="titulo" id="titulo" value="<?php echo $dados_anotacao['titulo']; ?>">
+            <label for="conteudo">Conteúdo:</label>
+            <textarea name="conteudo" id="conteudo" cols="30" rows="10"><?php echo $dados_anotacao['conteudo']; ?></textarea>
+            <button type="submit">Criar</button>
         </form>
-        <div class="icones">
-            <a href="editar-anotacao.php?id_anotacao=<?php echo $dados_anotacao['id_anotacao']; ?>" class="icone"><img src="../../img/editar.png" alt="Ícone de editar" class="icone-editar"></a>
-            <a href="../../../backend/users/excluir-anotacao.php?id_anotacao=<?php echo $dados_anotacao['id_anotacao']; ?>" class="icone"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
-        </div>
     </main>
 </body>
 </html>
