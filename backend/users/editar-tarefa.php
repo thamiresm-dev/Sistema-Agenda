@@ -1,15 +1,16 @@
 <?php
-    session_start();
-    include_once("../conexao.php");
+    require_once("../auth.php");
 
     $id_tarefa = $_POST['id-tarefa'];
     $titulo = $_POST['titulo'];
     $descricao = $_POST['descricao'];
     $data = $_POST['data'];
 
-    $sql = "UPDATE tarefas SET titulo = '$titulo', descricao = '$descricao', data = '$data' WHERE id_tarefa = '$id_tarefa'";
-    $result = mysqli_query($conexao, $sql);
+    $sqlUpdate = $conexao->prepare("UPDATE tarefas SET titulo = ?, descricao = ?, data = ? WHERE id_tarefa = ?");
+    $sqlUpdate->bind_param("sssi", $titulo, $descricao, $data, $id_tarefa);
+    $sqlUpdate->execute();
+    $sqlUpdate->close();
 
-    header('Location: ../../frontend/pages/usuario-logado/minhas-tarefas.php');
+    header("Location: ".URL_BASE."frontend/pages/usuario-logado/minhas-tarefas.php");
     exit();
 ?>

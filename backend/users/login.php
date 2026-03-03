@@ -5,11 +5,13 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
-    $result = mysqli_query($conexao, $sql);
+    $sqlSelect = $conexao->prepare("SELECT * FROM usuarios WHERE email = ?");
+    $sqlSelect->bind_param("s", $email);
+    $sqlSelect->execute();
+    $result = $sqlSelect->get_result();
 
-    if(mysqli_num_rows($result) == 1){
-        $dadosUsuario = mysqli_fetch_assoc($result); // Pega a linha do resultado da consulta sql e transforma em um array associativo de dados
+    if($result->num_rows == 1){
+        $dadosUsuario = $result->fetch_assoc(); // Pega a linha do resultado da consulta sql e transforma em um array associativo de dados
 
         if(password_verify($password, $dadosUsuario['password'])){
             $_SESSION['id'] = $dadosUsuario['id'];
@@ -23,4 +25,6 @@
     else{
         echo "Usuário não encontrado!";
     }
+
+    $sqlSelect->close();
 ?>

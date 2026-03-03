@@ -3,17 +3,23 @@
 
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Criptografa a senha
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sqlVerificaEmail = "SELECT * FROM usuarios WHERE email = '$email'";
-    $quantEmail = mysqli_query($conexao, $sqlVerificaEmail);
+    $sqlVerificaEmail = $conexao->prepare("SELECT * FROM usuarios WHERE email = ?");
+    $sqlVerificaEmail->bind_param("s", $email);
+    $sqlVerificaEmail->execute();
+    $sqlVerificaEmail->store_result(); // Permite usar num_rows
 
-    if(mysqli_num_rows($quantEmail) == 1){
-        echo "Não foi possível cadastrar, endereço de email já existente.";
+    if($sqlVerificaEmail->num_rows > 0){
+        $sqlVerificaEmail->close();
+        echo "Não foi possível cadastrar, email já existente.";
     }
     else{
-        $sql = "INSERT INTO usuarios(username, email, password) VALUES ('$username', '$email', '$password')";
-        $result = mysqli_query($conexao, $sql);
+        $sqlVerificaEmail->close();
+        $sqlInsert = $conexao->prepare("INSERT INTO usuarios(username, email, password) VALUES (?, ?, ?)");
+        $sqlInsert->bind_param("sss", $username, $email, $password);
+        $sqlInsert->execute();
+        $sqlInsert->close();
 
         header('Location: ../../frontend/pages/login.html');
         exit();

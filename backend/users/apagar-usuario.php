@@ -1,14 +1,14 @@
 <?php
-    session_start();
-    include_once("../conexao.php");
+    require_once("../auth.php");
 
     $id = $_SESSION['id'];
-    $sql = "DELETE FROM usuarios WHERE id = '$id'";
-    $result = mysqli_query($conexao, $sql);
+
+    $sqlDelete = $conexao->prepare("DELETE FROM usuarios WHERE id = ?");
+    $sqlDelete->bind_param("i", $id);
+    $sqlDelete->execute();
+    $sqlDelete->close();
 
     session_destroy();
-
-    header('Location: ../../frontend/pages/inicio.html');
-
+    header("Location: ".URL_BASE."frontend/pages/inicio.html");
     exit();
 ?>

@@ -1,9 +1,9 @@
 <?php
-    session_start();
+    require_once("../auth.php");
 
     session_destroy();
 
-    header('Location: ../../frontend/pages/login.html');
+    header("Location: ".URL_BASE."frontend/pages/login.html");
 
     exit();
 ?>

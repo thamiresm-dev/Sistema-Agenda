@@ -1,11 +1,5 @@
 <?php
-    session_start();
-    include_once("../../../backend/conexao.php");
-
-    if(!isset($_SESSION['email'])){
-        header('Location: ../login.html');
-        exit();
-    }
+    require_once("../../../backend/auth.php");
 
     $id_tarefa = $_GET['id_tarefa'];
     $sql = "SELECT * FROM tarefas WHERE id_tarefa = $id_tarefa";

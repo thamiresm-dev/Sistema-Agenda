@@ -1,11 +1,5 @@
 <?php
-    session_start();
-    include_once("../../../backend/conexao.php");
-
-    if(!isset($_SESSION['email'])){
-        header('Location: ../login.html');
-        exit();
-    }
+    require_once("../../../backend/auth.php");
 
     $id_anotacao = $_GET['id_anotacao'];
     $sql = "SELECT * FROM anotacoes WHERE id_anotacao = $id_anotacao";;
