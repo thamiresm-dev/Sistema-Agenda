@@ -11,7 +11,7 @@
 </p>
 
 <h2>Objetivo:</h2>
-<p>Fornecer um sistema web que permita que usuários criem sua tarefas, façam anotações e utilizem um checklist.</p>
+<p>Fornecer um sistema web que permita que usuários criem suas tarefas, façam anotações e utilizem um checklist.</p>
 
 <h2>Funcionalidades:</h2>
 <ul>
@@ -21,6 +21,33 @@
   <li>Criar, editar e excluir anotações;</li>
   <li>Criar e excluir itens em checklist.</li>
 </ul>
+
+<h2>Demonstração do sistema:</h2>
+<h3>Página inicial:</h3>
+<div align="center">
+  <img src="frontend/img/screenshot-inicio.png" alt="Tela inicial" width="58%">
+  <p>Página que é exibida assim que o sistema é acessado, nela contém as opções "Cadastrar-me" (criar conta) e "Entrar" (fazer login).</p>
+</div>
+<h3>Menu principal:</h3>
+<div align="center">
+  <img src="frontend/img/screenshot-menu-principal.png" alt="Tela de menu principal" width="58%">
+  <p>Página com opções que é exibida assim que o usuário realiza login.</p>
+</div>
+<h3>Página de tarefas:</h3>
+<div align="center">
+  <img src="frontend/img/screenshot-minhas-tarefas.png" alt="Página de tarefas" width="58%">
+  <p>Página com as tarefas criadas pelo usuário (ao clicar na tarefa pode-se visualizar mais detalhes sobre ela, bem como a opção de editá-la).</p>
+</div>
+<h3>Página de anotações:</h3>
+<div align="center">
+  <img src="frontend/img/screenshot-anotações.png" alt="Página de anotações" width="58%">
+  <p>Página com anotações (para visualizar seu conteúdo, basta clicar em cima da anotação).</p>
+</div>
+<h3>Página de checklist (lista de afazeres):</h3>
+<div align="center">
+  <img src="frontend/img/screenshot-lista-afazeres.png" alt="Página de checklist" width="58%">
+  <p>Página com lista de afazeres, possibilitando marcar ou desmarcar itens.</p>
+</div>
 
 <h2>Tecnologias utilizadas:</h2>
 <ul>
