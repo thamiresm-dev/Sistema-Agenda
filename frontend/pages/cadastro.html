@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html">
+            <img src="../img/seta-esquerda.png" alt="Voltar ícone">
+        </a>
+    </header>
+    <main>
+        <form action="../../backend/users/cadastro.php" method="post">
+            <label for="nome">Nome de usuário:</label>
+            <input type="text" name="username" class="input" id="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="input" id="email" required>
+            <label for="senha">Senha:</label>
+            <input type="password" name="password" class="input" id="senha" required>
+            <button type="submit">Criar conta</button>
+        </form>
+    </main>
+</body>
+</html>

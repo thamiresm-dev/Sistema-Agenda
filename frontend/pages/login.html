@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <header>
+        <a href="inicio.html">
+            <img src="../img/seta-esquerda.png" alt="Voltar ícone">
+        </a>
+    </header>
+    <main>
+        <form action="../../backend/users/login.php" method="post">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <label for="senha">Senha:</label>
+            <input type="password" name="password" id="senha">
+            <button type="submit">Entrar</button>
+        </form>
+    </main>
+</body>
+</html>

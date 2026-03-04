@@ -1,0 +1,135 @@
+body{
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, #FFF7DE, #BBD6D2, #76B4C5);
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    padding: 1rem;
+    justify-content: end;
+    align-items: center;
+}
+
+#menu-principal{
+    font-size: 24px;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+#menu-principal:hover{
+    color: #76B4C5;
+    text-decoration: underline;
+}
+
+.perfil-container{
+    margin-right: 3.8rem;
+    position: relative;
+}
+
+img{
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+}
+
+.menu-perfil{
+    position: absolute;
+    background-color: white;
+    font-size: 20px;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    right: 0;    
+    display: none;
+}
+
+.menu-perfil.ativo{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-perfil a{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; /* Padding não ultrapassa o tamanho do menu */
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-perfil a:hover{
+    color: #76B4C5;
+}
+
+main{
+    flex: 1;        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p{
+    font-weight: 800;
+    font-size: 32px;
+}
+
+#nome-pagina{
+    margin-left: 3rem;
+    margin-bottom: 1.8rem;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+li{
+    width: 85%;
+    height: 5.5rem;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+form{
+    width: 90%;
+    display: flex;
+}
+
+input{
+    height: 4rem;
+    width: 4rem;
+}
+
+input[type="checkbox"]:checked{
+    accent-color: white;
+}
+
+label{
+    padding: 24px;
+    width: 95%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 24px;
+    background-color: #FFF7DE;
+}
+
+.icone-lixo{
+    background-color: #FA8E8E;
+    padding: 10px;
+    border-radius: 24px;
+}
+
+#link-icone-add{
+    margin: auto;
+}
