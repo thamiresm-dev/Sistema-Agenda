@@ -1,5 +1,7 @@
 <h1 align="center">Sistema Agenda</h1>
 
+---
+
 <p align="center">O Sistema Agenda é um software de organização pessoal que permite que usuários gerenciem suas tarefas e compromissos, além de fazerem anotações, tudo em um único ambiente.</p>
 
 <p align="center">
@@ -26,12 +28,12 @@
 <h3>Página inicial:</h3>
 <div align="center">
   <img src="frontend/img/screenshot-inicio.png" alt="Tela inicial" width="58%">
-  <p>Página que é exibida assim que o sistema é acessado, nela contém as opções "Cadastrar-me" (criar conta) e "Entrar" (fazer login).</p>
+  <p>Página que é exibida assim que o sistema é acessado, nela contém as opções de cadastro e login.</p>
 </div>
 <h3>Menu principal:</h3>
 <div align="center">
   <img src="frontend/img/screenshot-menu-principal.png" alt="Tela de menu principal" width="58%">
-  <p>Página com opções que é exibida assim que o usuário realiza login.</p>
+  <p>Página exibida após login, contendo as principais opções do sistema.</p>
 </div>
 <h3>Página de tarefas:</h3>
 <div align="center">
@@ -77,4 +79,4 @@
 </ul>
 
 <h2>Autora:</h2>
-<p>Thamires Marques A.</p>
+<p>Thamires Marques</p>
