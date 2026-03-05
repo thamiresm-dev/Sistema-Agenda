@@ -28,7 +28,7 @@
             <input type="text" name="titulo" id="titulo" value="<?php echo $dados_anotacao['titulo']; ?>">
             <label for="conteudo">Conteúdo:</label>
             <textarea name="conteudo" id="conteudo" cols="30" rows="10"><?php echo $dados_anotacao['conteudo']; ?></textarea>
-            <button type="submit">Criar</button>
+            <button type="submit">Editar</button>
         </form>
     </main>
 </body>

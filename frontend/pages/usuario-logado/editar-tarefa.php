@@ -30,7 +30,7 @@
             <textarea name="descricao" id="descricao" cols="30" rows="10"><?php echo $dados_tarefa['descricao']; ?></textarea>
             <label for="data">Data de conclusão:</label>
             <input type="date" name="data" id="data" value="<?php echo $dados_tarefa['data']; ?>">
-            <button type="submit">Criar</button>
+            <button type="submit">Editar</button>
         </form>
     </main>
 </body>
