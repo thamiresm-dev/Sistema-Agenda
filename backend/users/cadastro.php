@@ -1,9 +1,29 @@
 <?php
     include_once('../conexao.php');
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    // Verifica se os dados estão chegando
+    if(!isset($_POST['username']) || !isset($_POST['email']) || !isset($_POST['password'])){
+        die("Dados incompletos!");
+    }
+
+    $username = trim($_POST['username']);
+    $email = trim($_POST['email']);
+    $passwordInput = trim($_POST['password']);
+
+    // Verifica se os dados estão vazios
+    if(empty($username) || empty($email) || empty($passwordInput)){
+        die("Defina todos os dados corretamente!");
+    }
+
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        die("Email inválido!");
+    }
+
+    if(strlen($passwordInput) < 8){
+        die("Senha muito curta!");
+    }
+
+    $password = password_hash($passwordInput, PASSWORD_DEFAULT);
 
     $sqlVerificaEmail = $conexao->prepare("SELECT * FROM usuarios WHERE email = ?");
     $sqlVerificaEmail->bind_param("s", $email);
