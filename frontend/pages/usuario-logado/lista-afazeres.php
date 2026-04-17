@@ -36,7 +36,7 @@
                             <input type="checkbox" name="concluido" id="1" onchange="this.form.submit()" <?php echo $item['concluido'] == 1 ? 'checked' : '' ?>>
                             <label for=""><?php echo $item['descricao']; ?></label>
                         </form>
-                        <a href="../../../backend/users/excluir-item-lista.php?id_item=<?php echo $item['id_item']; ?>"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
+                        <a href="../../../backend/users/excluir-item-lista.php?id_item=<?php echo $item['id_item']; ?>" class="btn-excluir"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
                     </li>
                 <?php } ?>
             </ul>
@@ -45,5 +45,6 @@
     </main>
     <script src="../../js/menu-dropdown.js"></script>
     <script src="../../js/confirma-exclusao-conta.js"></script>
+    <script src="../../js/confirma-exclusao-item.js"></script>
 </body>
 </html>

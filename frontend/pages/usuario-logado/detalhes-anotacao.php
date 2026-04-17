@@ -22,14 +22,15 @@
         </a>
     </header>
     <main>
-        <form action="" method="">
+        <form>
             <p class="dados" id="titulo"><b><?php echo $dados_anotacao['titulo']; ?></b></p>
-            <p class="dados" id="conteudo"><?php echo $dados_anotacao['conteudo']; ?></p>
+            <p class="dados" id="conteudo"><?php echo nl2br(htmlspecialchars($dados_anotacao['conteudo'])); ?></p>
         </form>
         <div class="icones">
             <a href="editar-anotacao.php?id_anotacao=<?php echo $dados_anotacao['id_anotacao']; ?>" class="icone"><img src="../../img/editar.png" alt="Ícone de editar" class="icone-editar"></a>
-            <a href="../../../backend/users/excluir-anotacao.php?id_anotacao=<?php echo $dados_anotacao['id_anotacao']; ?>" class="icone"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
+            <a href="../../../backend/users/excluir-anotacao.php?id_anotacao=<?php echo $dados_anotacao['id_anotacao']; ?>" class="icone btn-excluir"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
         </div>
     </main>
+    <script src="../../js/confirma-exclusao-item.js"></script>
 </body>
 </html>

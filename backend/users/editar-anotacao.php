@@ -10,6 +10,6 @@
     $sqlUpdate->execute();
     $sqlUpdate->close();
 
-    header("Location: ".URL_BASE."frontend/pages/usuario-logado/anotacoes.php");
+    header("Location: ".URL_BASE."frontend/pages/usuario-logado/detalhes-anotacao.php?id_anotacao=".$id_anotacao);
     exit();
 ?>

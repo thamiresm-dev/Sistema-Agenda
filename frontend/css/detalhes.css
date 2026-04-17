@@ -52,6 +52,12 @@ form{
     overflow-wrap: break-word; /* Quebra linha se o conteúdo exceder o tamanho do layout */
 }
 
+#titulo{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
 .icones{
     display: flex;
     width: 50%;

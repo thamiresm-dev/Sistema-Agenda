@@ -11,6 +11,6 @@
     $sqlUpdate->execute();
     $sqlUpdate->close();
 
-    header("Location: ".URL_BASE."frontend/pages/usuario-logado/minhas-tarefas.php");
+    header("Location: ".URL_BASE."frontend/pages/usuario-logado/detalhes-tarefa.php?id_tarefa=".$id_tarefa);
     exit();
 ?>

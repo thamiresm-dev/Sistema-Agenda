@@ -22,11 +22,10 @@
         </a>
     </header>
     <main>
-        <form action="" method="">
-            <label for="titulo">Título:</label>
-            <p class="dados" id="titulo"><?php echo $dados_tarefa['titulo']; ?></p>
+        <form>
+            <p class="dados" id="titulo"><b><?php echo $dados_tarefa['titulo']; ?></b></p>
             <label for="descricao">Descrição:</label>
-            <p class="dados" id="descricao"><?php echo $dados_tarefa['descricao']; ?></p>
+            <p class="dados" id="descricao"><?php echo nl2br(htmlspecialchars($dados_tarefa['descricao'])); ?></p>
             <label for="data">Data de conclusão:</label>
             <p class="dados" id="data"><?php echo $dados_tarefa['data']; ?></p>
         </form>

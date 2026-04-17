@@ -75,6 +75,7 @@
   <li>Senhas armazenadas com password_hash();</li>
   <li>Verificação de senhas com password_verify();</li>
   <li>Uso de Prepared Statements;</li>
+  <li>Validação de dados no back-end;</li>
   <li>Proteção de páginas com controle de sessão.</li>
 </ul>
 

@@ -34,7 +34,7 @@
                     <a href="detalhes-tarefa.php?id_tarefa=<?php echo $tarefa['id_tarefa']; ?>" id="link-tarefa">
                         <p><?php echo $tarefa['titulo']; ?></p>
                     </a>   
-                    <a href="../../../backend/users/excluir-tarefa.php?id_tarefa=<?php echo $tarefa['id_tarefa']; ?>"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
+                    <a href="../../../backend/users/excluir-tarefa.php?id_tarefa=<?php echo $tarefa['id_tarefa']; ?>" class="btn-excluir"><img src="../../img/lixeira.png" alt="Ícone de lixo" class="icone-lixo"></a>
                 </div>
                 <?php } ?>
             </div>
@@ -43,5 +43,6 @@
     </main>
     <script src="../../js/menu-dropdown.js"></script>
     <script src="../../js/confirma-exclusao-conta.js"></script>
+    <script src="../../js/confirma-exclusao-item.js"></script>
 </body>
 </html>
